@@ -22,8 +22,9 @@ df['score'] = df['impact']*df['likelihood']
 scoresPivot = df.pivot('impact', 'likelihood', 'score')
 print(scoresPivot)
 
-labelsPivot = df.pivot('impact', 'likelihood', 'risk')
-print(labelsPivot)
+#use when using array, replaces Na values with empty strings
+#labelsPivot = df.pivot('impact', 'likelihood', 'risk')
+#print(labelsPivot)
 #test replacement
 #print(labelsPivot)
 
