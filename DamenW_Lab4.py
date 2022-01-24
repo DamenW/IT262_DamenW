@@ -9,7 +9,7 @@ df = pd.DataFrame(columns = ['risk', 'likelihood', 'impact', 'score'])
 df['risk'] = ['users', 'team', 'budget', 'security']
 
 #estimate the likelihood of happening
-df ['likelihood'] = [0.2, 0.3, 0.1, 0.5]
+df['likelihood'] = [0.2, 0.3, 0.1, 0.5]
 
 #assess the severity of impact if the uncertainty happens (pick a scale)
 df['score'] = df['impact']*df['likelihood']
@@ -24,6 +24,8 @@ print(scoresPivot)
 
 labelsPivot = df.pivot('impact', 'likelihood', 'risk')
 print(labelsPivot)
+#test replacement
+#print(labelsPivot)
 
 #replaces no labels with empty strings
 labelsPivot.fillna('', inplace=True)
