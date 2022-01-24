@@ -31,4 +31,4 @@ print(labelsPivot)
 labelsPivot.fillna('', inplace=True)
 
 #simple heatmap
-p1 = sns.heatmap(scoresPivot, cmap="BuPu", annot=labelsPivot, fmt='')
+p1 = sns.heatmap(scoresPivot, cmap="Spectral", annot=labelsPivot, fmt='')
